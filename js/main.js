@@ -56,12 +56,23 @@ window.culqi = async () => {
     email = Culqi.token.email;
 
     const { statusCode } = await generateChargeImpl({ deviceId, email, tokenId });
-    validationInit3DS({ email, statusCode, tokenId });
+    console.log(tokenId);
+    if (tokenId.indexOf("ype") !== -1) {
+      console.log("La variable contiene la palabra 'ype'");
+      $('#yape-code').html("Cargo Generado Existosamente");  
+      var yapebutton = document.getElementById("yape-button");
+      yapebutton.innerText = "Yapear S/11.00";
+    }
+    else
+    {
+      validationInit3DS({ email, statusCode, tokenId });
+    }
+    
 
   } else if (Culqi.order) {// Objeto order creado exitosamente!
     let order = Culqi.order;
     alert('Se ha creado el objeto Order:', order);
-    console.log(`Se ha creado el objeto Order: ${order}.`);
+    console.log(`Se ha creado el objeto Order Number: ${order}.`);
     if (order.payment_code) {
       alert('Se ha creado el cip:' + order.payment_code);
       $('#cip')
@@ -127,6 +138,7 @@ const validationInit3DS = ({ statusCode, email, tokenId }) => {
 Culqi.validationPaymentMethods();
 //Obtenemos los metodos de pagos disponibles
 console.log(Culqi.paymentOptionsAvailable);
+console.log("SI USA EL paymentOptionsAvailable")
 
 var paymentTypeAvailable = Culqi.paymentOptionsAvailable;
 
@@ -137,6 +149,7 @@ buttonMethod.forEach((button) => {
     el.target.disabled = true;
     el.preventDefault();
     const method = button.getAttribute('data-button-method');
+    console.log("Se genero usando el paymentTypeAvailable");
     if (paymentTypeAvailable[method].available) {
       el.target.innerHTML = el.target.dataset.textButton;
       paymentTypeAvailable[method].generate();

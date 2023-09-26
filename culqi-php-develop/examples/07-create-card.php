@@ -3,6 +3,9 @@
  * Ejemplo 2
  * Como crear un charge a una tarjeta usando Culqi PHP.
  */
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 try {
   // Usando Composer (o puedes incluir las dependencias manualmente)

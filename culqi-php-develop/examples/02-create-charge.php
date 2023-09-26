@@ -1,5 +1,11 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE);
+
 header('Content-Type: application/json');
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
+
 
 require '../Requests-master/library/Requests.php';
 Requests::register_autoloader();

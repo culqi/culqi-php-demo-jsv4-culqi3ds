@@ -46,6 +46,7 @@
     }
     const openCheckout = document.querySelector('#open-checout');
     openCheckout.addEventListener('click', event => {
+      console.log("Dentro a openCheckout");
       Culqi.open();
     })
   </script>
