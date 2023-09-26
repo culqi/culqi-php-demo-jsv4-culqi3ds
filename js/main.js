@@ -62,6 +62,8 @@ window.culqi = async () => {
       $('#yape-code').html("Cargo Generado Existosamente");  
       var yapebutton = document.getElementById("yape-button");
       yapebutton.innerText = "Yapear S/11.00";
+      alert("Cargo Generado Existosamente");  
+      location.reload();
     }
     else
     {
@@ -91,7 +93,8 @@ window.culqi = async () => {
       $('#qr').removeClass('hidden');
     } else {
       $('#response-qr').addClass('hidden');
-      $('#response-qr').html('El excede el rango de monto');
+      $('#response-qr').html('El excede el rango de monto');    
+      location.reload();  
     }
     if (order.cuotealo) {
       alert('Se ha creado el link cuotéalo:' + order.cuotealo);
@@ -101,6 +104,7 @@ window.culqi = async () => {
       $('#cuotealo').children('div#result').removeClass('hidden');
       $('#link-cuotealo').attr('href', order.cuotealo);
       $('#link-cuotealo').html(order.cuotealo);
+      location.reload();
     }
   }
   else {// Hubo algún problema!
@@ -128,9 +132,11 @@ const validationInit3DS = ({ statusCode, email, tokenId }) => {
   } else if (statusCode === 201) {
     resultdiv("PAGO EXITOSO - SIN 3DS");
     Culqi3DS.reset();
+    location.reload();
   } else {
     resultdiv("PAGO FALLIDO");
     Culqi3DS.reset();
+    location.reload();
 
   }
 }
