@@ -1,0 +1,12 @@
+<?php
+
+define('PUBLIC_KEY', 'INSERTE_SU_LLAVE_PUBLICA');
+define('SECRET_KEY', "INSERTE_SU_LLAVE_PRIVADA");
+define('RSA_ID', "INSERTE_SU_RSA_ID");
+define('RSA_PUBLIC_KEY', 'INSERTE_SU_LLAVE_RSA'.
+'INSERTE_SU_LLAVE_RSA'.
+'r5CyfBKXc3Izq+btIEMCrkDrIsz4Lnl5E3FSD7/htFn1oE84SaDKl5DgbNoev3pM'.
+'C7MDDgdCFrHODOp7aXwjG8NaiCbiymyBglXyEN28hLvgHpvZmAn6KFo0lMGuKnz8'.
+'HiuTfpBl6HpD6+02SQIDAQAB'.
+'-----END PUBLIC KEY-----');
+define('EMAIL_CUSTOMER', 'prueba1@culqi.com');
