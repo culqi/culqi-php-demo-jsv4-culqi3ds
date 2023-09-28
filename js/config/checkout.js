@@ -8,8 +8,8 @@ const culqiConfig = ({ orderId }) => {
     amount: config.TOTAL_AMOUNT,
     title: 'INTERSEGURO', //Obligatorio para yape
     order: orderId, // Este parámetro es requerido para realizar pagos con pagoEfectivo, billeteras y Cuotéalo
-    culqiclient: 'magento',
-    culqiclientversion: '3.0'
+    xculqirsaid: config.RSA_ID,
+    rsapublickey: config.RSA_PUBLIC_KEY,
   });
 
   Culqi.options({

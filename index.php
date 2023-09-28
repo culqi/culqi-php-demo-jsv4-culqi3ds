@@ -15,12 +15,13 @@
 
 <body>
   <div class=" w-full m-auto">
-    <h1 class="my-6 text-xl font-bold text-center">Culqi-JS Personalizado</h1>
+    <h1 class="my-6 text-xl font-bold text-center">Culqi-JS v4 Personalizado</h1>
     <div class="max-w-7xl mt-10 mx-auto w-full flex flex-col sm:flex-row flex-grow overflow-hidden">
       <?php include "components/sidebar.html" ?>
       
       <div class="w-full p-6 px-6 grid grid-cols-1 gap-4 place-content-center place-items-center" id="content-culqijs">
-        <div id="amount"></div>
+        <div id="amount" style="width: 800px; float: right; text-align: right; font-weight: 500;"></div>
+        </br>
         <?php include "components/payments-methods/token.html" ?>
         <?php include "components/payments-methods/cip.html" ?>
         <?php include "components/payments-methods/cuotealo.html" ?>

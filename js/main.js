@@ -94,18 +94,15 @@ window.culqi = async () => {
       $('#qr').removeClass('hidden');
     } else {
       $('#response-qr').addClass('hidden');
-      $('#response-qr').html('El excede el rango de monto');    
-      location.reload();  
+      $('#response-qr').html('El excede el rango de monto');     
     }
     if (order.cuotealo) {
-      alert('Se ha creado el link cuotéalo:' + order.cuotealo);
       $('#cip').addClass('hidden');
       $('#cuotealo').removeClass('hidden');
       $('#cuotealo').children('div#button').addClass('hidden');
       $('#cuotealo').children('div#result').removeClass('hidden');
       $('#link-cuotealo').attr('href', order.cuotealo);
-      $('#link-cuotealo').html(order.cuotealo);
-      location.reload();
+      $('#link-cuotealo').html("order.cuotealo");
     }
   }
   else {// Hubo algún problema!
