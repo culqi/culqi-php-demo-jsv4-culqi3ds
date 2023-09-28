@@ -10,7 +10,7 @@ export default Object.freeze({
   'HiuTfpBl6HpD6+02SQIDAQAB'+
   '-----END PUBLIC KEY-----',
   COUNTRY_CODE: "PE",
-  URL_BASE: "http://localhost/culqijsv4-yape__3ds/",
+  URL_BASE: "http://localhost/culqi-php-demo-jsv4-culqi3ds/",
 });
 
 export const customerInfo = {
