@@ -26,17 +26,21 @@ composer require culqi/culqi-php
 
 Esto generará una carpeta **vendor** donde se encuentra la librería **culqi-php**.
 
-## Configuración backend
+## Configurar las pruebas y ejemplos
+
+Antes de ejecutar la demo, configura localmente tus propias llaves `pk_test_` y `sk_test_` y los datos RSA obtenidos desde CulqiPanel. No hagas commit de llaves ni las publiques. La llave secreta se usa solo en el backend; no la incluyas en el frontend.
+
+### Configuración backend
 
 Primero se tiene que modificar los valores del archivo `settings.php` que se encuentra en la raíz del proyecto. A continuación un ejemplo.
 
 ```
-define('PUBLIC_KEY', 'Llave pública del comercio (INSERTE_SU_LLAVE_PUBLICA)');
-define('SECRET_KEY', "Llave secreta del comercio (INSERTE_SU_LLAVE_PRIVADA)");
+define('PUBLIC_KEY', 'INSERTE_SU_LLAVE_PUBLICA');
+define('SECRET_KEY', 'INSERTE_SU_LLAVE_PRIVADA');
 define('RSA_ID', 'INSERTE_SU_RSA_ID');
 define('RSA_PUBLIC_KEY', 'INSERTE_SU_LLAVE_RSA');
 ```
-## Configuración frontend
+### Configuración frontend
 
 Para configurar los datos del cargo, pk del comercio y datos del cliente se tiene que modificar en el archivo `/js/config/index.js`.
 
@@ -44,9 +48,9 @@ Para configurar los datos del cargo, pk del comercio y datos del cliente se tien
 export default Object.freeze({
     TOTAL_AMOUNT: monto de pago,
     CURRENCY: tipo de moneda,
-    PUBLIC_KEY: llave publica del comercio (INSERTE_SU_LLAVE_PUBLICA),
-    RSA_ID: Id de la llave RSA,
-    RSA_PUBLIC_KEY: Llave pública RSA que sirve para encriptar el payload de los servicios del checkout,
+    PUBLIC_KEY: 'INSERTE_SU_LLAVE_PUBLICA',
+    RSA_ID: 'INSERTE_SU_RSA_ID',
+    RSA_PUBLIC_KEY: 'INSERTE_SU_LLAVE_RSA',
     COUNTRY_CODE: iso code del país(Ejemplo PE)
 });
 
